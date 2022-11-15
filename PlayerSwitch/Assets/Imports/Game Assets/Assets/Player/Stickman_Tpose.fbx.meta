@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: d922785b786a64544a1a5eab64613ebe
+guid: bec4683ff2b6a5e48950030e75d050c0
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: StickmanBaseMTL
+    second: {fileID: 2100000, guid: 5f952defd80902c4787eb07037ab7841, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

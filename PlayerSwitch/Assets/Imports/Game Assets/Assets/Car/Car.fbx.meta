@@ -6,7 +6,57 @@ ModelImporter:
   - first:
       74: 1827226128182048838
     second: Take 001
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CarBlack2MTL
+    second: {fileID: 2100000, guid: ce0b89bca82ca8a48af1fd0929817b17, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CarBlackMTL
+    second: {fileID: 2100000, guid: 77efcfcc582037c4db47b519fbe90b04, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CarFlashMTL
+    second: {fileID: 2100000, guid: 215e46557943c0942866687677aeb59b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CarFrameMTL
+    second: {fileID: 2100000, guid: d892234761ff333469c87d5d0162a6fb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CarGlassMTL
+    second: {fileID: 2100000, guid: 999c5c76eb9d55a44a63fe2365788ace, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CarGreyMTL
+    second: {fileID: 2100000, guid: 42b259e8c577fc34d9426c421532b16d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CarInsideMTL
+    second: {fileID: 2100000, guid: 0cf3e48e7692f5143a18a30bc0ddfcdb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CarLampDeepBlackMTL
+    second: {fileID: 2100000, guid: f9fc424c484440c4caa85d666e0d7668, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CarLampGreyMTL
+    second: {fileID: 2100000, guid: 485f8f074273d9e40b619fbd8af0dc15, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CarMirrorMTL
+    second: {fileID: 2100000, guid: f43a5221342d5af4895473a47a951ccd, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
