@@ -543,7 +543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoints: []
   XSize: 5
-  YSize: 2
+  YSize: 4
   MaxSpawnCount: 10
   xspace: 2
   yspace: 2
@@ -552,6 +552,7 @@ MonoBehaviour:
   _maxSpawnCount: 10
   _spawnRadius: 10
   _spawnPeriod: 2
+  randomList: 
 --- !u!1 &950551285
 GameObject:
   m_ObjectHideFlags: 0
