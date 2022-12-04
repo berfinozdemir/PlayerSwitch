@@ -16,17 +16,28 @@ public class GamePlayManager : MonoBehaviour
     }
     private void Start()
     {
+        CloseAllAreas();
         SetDuty();
     }
     public List<UnlockArea> unlockAreas = new List<UnlockArea>();
+    public UnlockArea NextArea;
+    void CloseAllAreas()
+    {
+        foreach (var item in unlockAreas)
+        {
+            item.gameObject.SetActive(false);
+        }
+    }
     public UnlockArea SetDuty()
     {
         UnlockArea unlock = null;
-        foreach (var item in unlockAreas)
+        for (int i = 0; i < unlockAreas.Count; i++)
         {
-            if (item.RequiredMetalCount != 0)
+            if (unlockAreas[i].RequiredMetalCount != 0)
             {
-                unlock = item;
+                unlock = unlockAreas[i];
+                unlock.gameObject.SetActive(true);
+                NextArea = unlockAreas[i + 1];
                 break;
             }
         }
