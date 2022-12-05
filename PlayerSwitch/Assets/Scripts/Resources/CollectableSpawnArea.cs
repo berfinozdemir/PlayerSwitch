@@ -12,14 +12,9 @@ public class CollectableSpawnArea : MonoBehaviour
     public float xspace, yspace;
     public GameObject collectablePrefab;
     public List<GameObject> SpawnedCollectables = new List<GameObject>();
-    [SerializeField] private int _maxSpawnCount = 10;
-    [SerializeField] private float _spawnRadius = 10;
 
     [SerializeField] private float _spawnPeriod = 2f;
-    List<int> selectedPos;
-
     private float nextSpawnTime = 0;
-    //public float yspace;
     private void Awake()
     {
         CreateSpawnPoints();
@@ -57,31 +52,21 @@ public class CollectableSpawnArea : MonoBehaviour
     public void Spawn()
     {
         var collectable = Instantiate(collectablePrefab, null);
-        collectable.transform.position = spawnPoints[UniqueRandomInt()];//list shuffle ile yapýlabilir
+        var index = Random.Range(0,spawnPoints.Count-1);
+        collectable.transform.position = spawnPoints[index];//list shuffle ile yapýlabilir
+        //Debug.Log(spawnPoints[index] + " + " + index);
+        spawnPoints.RemoveAt(index);
         SpawnedCollectables.Add(collectable);
         collectable.transform.localScale = Vector3.zero;
         collectable.transform.DOScale(1f, 0.5f).SetEase(Ease.OutBack, 2.5f);
         collectable.transform.DORotate(Vector3.up * 360f, 5f, RotateMode.LocalAxisAdd).SetLoops(-1);
 
     }
-    public void OpenObject(GameObject collectable)
+    public void Collect()
     {
-
+        // eger metal toplanýrsa pozisyonu tekrar listeye ekle 
     }
-    //    int index=0;
-    //public int SelectRandomIndex()
-    //{
-    //    index = Random.Range(0, spawnPoints.Count - 1);
-    //    if (!selectedPos.Contains(index))
-    //    {
-
-    //    }
-    //        selectedPos.Add(index);
-    //    // Debug.Log(index);
-    //    //spawnPoints.RemoveAt(index);
-        
-    //    return index;
-    //}
+  
     private void HandleNullElements()
     {
         for (int i = SpawnedCollectables.Count - 1; i >= 0; i--)
@@ -93,17 +78,18 @@ public class CollectableSpawnArea : MonoBehaviour
         }
 
     }
-    public List<int> randomList = new List<int>();
-    int UniqueRandomInt()
-    {
-        //var rand = new Random();
-        int myNumber;
-        do
-        {
-            myNumber = Random.Range(0, spawnPoints.Count-1);//bu dongu tehlikeli!!!
-        } while (randomList.Contains(myNumber));
+    //List<int> randomList = new List<int>();
+    //int UniqueRandomInt()
+    //{
+    //    //var rand = new Random();
+    //    int index;
+    //    do
+    //    {
+    //        index = Random.Range(0, spawnPoints.Count-1);//bu dongu tehlikeli!!!
+    //    } while (randomList.Contains(index));
 
-        randomList.Add(myNumber);
-        return myNumber;
-    }
+    //    randomList.Add(index);
+    //    return index;
+    //}
+    
 }

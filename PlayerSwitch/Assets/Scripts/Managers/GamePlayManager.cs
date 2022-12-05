@@ -16,8 +16,8 @@ public class GamePlayManager : MonoBehaviour
     }
     private void Start()
     {
-        CloseAllAreas();
-        SetDuty();
+        //CloseAllAreas();
+        //SetDuty();
     }
     public List<UnlockArea> unlockAreas = new List<UnlockArea>();
     public UnlockArea NextArea;
@@ -28,21 +28,21 @@ public class GamePlayManager : MonoBehaviour
             item.gameObject.SetActive(false);
         }
     }
-    public UnlockArea SetDuty()
-    {
-        UnlockArea unlock = null;
-        for (int i = 0; i < unlockAreas.Count; i++)
-        {
-            if (unlockAreas[i].RequiredMetalCount != 0)
-            {
-                unlock = unlockAreas[i];
-                unlock.gameObject.SetActive(true);
-                NextArea = unlockAreas[i + 1];
-                break;
-            }
-        }
-        Debug.Log(unlock);
-        return unlock;
-    }
+    //public UnlockArea SetDuty()
+    //{
+    //    UnlockArea unlock = null;
+    //    for (int i = 0; i < unlockAreas.Count; i++)
+    //    {
+    //        if (unlockAreas[i].RequiredMetalCount != 0)
+    //        {
+    //            unlock = unlockAreas[i];
+    //            unlock.gameObject.SetActive(true);
+    //            NextArea = unlockAreas[i + 1];
+    //            break;
+    //        }
+    //    }
+    //    Debug.Log(unlock);
+    //    return unlock;
+    //}
     
 }
